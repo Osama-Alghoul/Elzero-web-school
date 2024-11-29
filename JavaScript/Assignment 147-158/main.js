@@ -1,10 +1,24 @@
 // 01
-function Car(name, model, price) {
-    this.n = name;
-    this.m = model;
-    this.p = price;
+class Car {
+    constructor(name, model, price) {
+        this.n = name;
+        this.m = model;
+        this.p = price;
+    }
+    run() {
+        return `Car Is Running Now`
+    } 
+    stop() {
+        return "Car Is Stopping Now"
+    }
 }
 
+let car1 = new Car("MG", 2022, 420000);
+let car2 = new Car("MGM", 2022, 420030);
+let car3 = new Car("MGG", 2022, 424000);
+
+console.log(`Car One Name Is ${car1.n} And Model Is ${car1.m} And Price Is ${car1.p}`);
+console.log(car1.run())
 // Needed Output
 
 "Car One Name Is MG And Model Is 2022 And Price Is 420000"
@@ -17,8 +31,8 @@ class Phone {
         this.serial = serial;
         this.price = price;
     }
+    
 }
-
 // Write Tablet Class Here
 
 let TabletOne = new Tablet("iPad", 100200300, 1500, 12.9);
@@ -91,4 +105,4 @@ console.log(myObj);
 
 "username => Elzero"
 "score => 1000"
-{ username: 'Elzero', score: 1000, id: 100 }
+//{ username: 'Elzero', score: 1000, id: 100 }
