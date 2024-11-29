@@ -1,0 +1,96 @@
+/* Number 1 */
+.num1 div {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+    width: 300px;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 3;
+    background-color: #eee;
+}
+
+.num1 div:empty {
+    background-color: red;
+}
+
+/* Number 2 */
+.num2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    width: fit-content;
+    padding: 7px 0;
+    margin-left: 10px;
+    position: relative;
+}
+
+.num2::first-letter {
+    visibility: hidden;
+}
+
+.num2::before {
+    content: "1";
+    background-color: red;
+    position: absolute;
+    color: white;
+    padding: 3px;
+    left: -7px;
+    top: 4px;
+}
+
+/* Number 3 */
+.num3 p {
+    background-color: #eee;
+    border-left-color: rgb(167, 2, 46);
+    border-left-style: solid;
+    height: 20px;
+    width: 400px;
+    position: relative;
+    margin-left: 50px;
+    padding-left: 3px;
+}
+
+.num3 p::before {
+    content: "";
+    border-color: transparent rgb(167, 2, 46) transparent transparent;
+    border-style: solid;
+    border-width: 7px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -15px;
+    top: 3px;
+}
+
+.num3 p::after {
+    content: attr(data-person);
+    position: absolute;
+    background-color: #eee;
+    width: 46px;
+    height: 20px;
+    left: -56px;
+}
+
+/* Number 4*/
+
+.num4 p {
+    font-family: Arial, Helvetica, sans-serif;
+    counter-increment: counter-data;
+    background-color: #eee;
+    border-right: orangered solid;
+    width: 400px;
+    position: relative;
+    margin-left: 15px;
+    padding: 6px 10px;
+}
+
+.num4 p::before {
+    content: counter(counter-data);
+    background-color: orangered;
+    position: absolute;
+    padding: 6px;
+    text-align: center;
+    left: -15px;
+    top: 0px;
+    color: white;
+}

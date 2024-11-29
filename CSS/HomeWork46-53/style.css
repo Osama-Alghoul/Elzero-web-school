@@ -1,0 +1,264 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Question 1 */
+.Q1div {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 7px 0 0 orangered, -7px 0 0 rgb(63, 63, 255);
+    color: orangered;
+    font-weight: bold;
+}
+
+/* Question 2 */
+.Q2parent {
+    display: flex;
+    width: 570px;
+    height: 270px;
+    margin: 0 auto;
+    background-color: #eee;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.Q2child {
+    width: 166px;
+    background-color: orangered;
+    color: white;
+    padding: 8px;
+
+}
+
+/* Question 3 */
+.Q3parent {
+    display: flex;
+    background-color: #eee;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 600px;
+    height: 280px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+#Q3child {
+    background-color: rgb(110, 110, 184);
+    color: white;
+    width: calc(540px/3);
+    height: 18px;
+}
+
+.Q3parent .Q3one {
+    order: 6;
+    align-self: flex-end;
+    padding: 10px 0;
+}
+
+.Q3parent .Q3two {
+    order: 5;
+    padding: 61px 0;
+
+}
+
+.Q3parent .Q3three {
+    order: 2;
+    padding: 10px 0;
+
+}
+
+.Q3parent .Q3four {
+    order: 3;
+    padding: 61px 0;
+
+}
+
+.Q3parent .Q3five {
+    order: 4;
+    padding: 61px 0;
+
+}
+
+.Q3parent .Q3six {
+    order: 1;
+    padding: 61px 0;
+}
+
+/* Question 4 */
+.Q4parent {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    width: 580px;
+    height: 280px;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#Q4child {
+    background-color: rgb(25, 125, 108);
+    color: white;
+    /* width: 30px; */
+    padding: calc(224.8px/3/2) 0;
+}
+
+.Q4one {
+    align-self: flex-end;
+    width: 30px;
+}
+
+.Q4two {
+    width: 290px;
+}
+
+.Q4three {
+    width: 30px;
+    align-self: flex-end;
+}
+
+/* Question 5 */
+.Q5parent {
+    background-color: #eee;
+    text-align: center;
+    height: 280px;
+    width: 580px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.Q5one {
+    order: 2;
+    width: 100px;
+    padding: 60.8px 0;
+    background-color: orange;
+    color: white;
+    align-self: flex-start;
+}
+
+.Q5two {
+    order: 3;
+    width: 100px;
+    padding: 60.8px 0;
+    background-color: lightgreen;
+    color: white;
+    align-self: flex-end;
+}
+
+.Q5three {
+    order: 4;
+    width: 100px;
+    padding: 60.8px 0;
+    color: white;
+    background-color: rgb(88, 47, 47);
+    align-self: flex-start;
+}
+
+.Q5four {
+    order: 1;
+    width: 100px;
+    padding: 60.8px 0;
+    color: white;
+    background-color: purple;
+    align-self: flex-end;
+}
+
+/* Question 6 */
+:root {
+    --Secondary-color: #ccc;
+    --main-color: #eee;
+
+
+
+    
+}
+
+.page {
+    background-color: var(--main-color);
+    /* display: flex; */
+    height: 600px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: var(--Secondary-color);
+    width: 10%;
+    height: 18.4px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    background-color: var(--Secondary-color);
+    width: 88%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+/* Main */
+.main-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    background-color: var(--Secondary-color);
+    width: 66%;
+    align-self: flex-start;
+    padding: 10px 2%;
+    height: 475px;
+}
+
+.sidebar {
+    background-color: var(--Secondary-color);
+    width: 26%;
+    padding: 10px 1%;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.copyright {
+    background-color: var(--Secondary-color);
+    width: 68%;
+    padding: 10px 2%;
+}
+
+.design {
+    background-color: var(--Secondary-color);
+    width: 27%;
+    padding: 10px 1%;
+}

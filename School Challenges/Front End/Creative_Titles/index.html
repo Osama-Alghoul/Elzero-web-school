@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 class="tag">Circle</h3>
+    <div class="container circle">
+        <div class="titels" id="blue">Creative Title</div>
+        <hr>
+        <div class="titels" id="red">Creative Title</div>
+        <hr>
+        <div class="titels" id="green">Creative Title</div>
+        <hr>
+        <div class="titels" id="brown">Creative Title</div>
+        <hr>
+    </div>
+    <h3 class="tag">Box</h3>
+    <div class="container box">
+        <div class="titels" id="blue">Creative Title</div>
+        <hr>
+        <div class="titels" id="red">Creative Title</div>
+        <hr>
+        <div class="titels" id="green">Creative Title</div>
+        <hr>
+        <div class="titels" id="brown">Creative Title</div>
+        <hr>
+    </div>
+    <h3 class="tag">Triangle Up</h3>
+    <div class="container t_up">
+        <div class="titels" id="blue">Creative Title</div>
+        <hr>
+        <div class="titels" id="red">Creative Title</div>
+        <hr>
+        <div class="titels" id="green">Creative Title</div>
+        <hr>
+        <div class="titels" id="brown">Creative Title</div>
+        <hr>
+    </div>
+    <h3 class="tag">Triangle Down</h3>
+    <div class="container t_down">
+        <div class="titels" id="blue">Creative Title</div>
+        <hr>
+        <div class="titels" id="red">Creative Title</div>
+        <hr>
+        <div class="titels" id="green">Creative Title</div>
+        <hr>
+        <div class="titels" id="brown">Creative Title</div>
+        <hr>
+    </div>
+</body>
+
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    .titels {
+        font-size: smaller;
+        font-weight: bold;
+        position: relative;
+    }
+
+    hr {
+        width: 250px;
+        height: 1px;
+        margin-left: 0;
+        margin-bottom: 15px;
+        border: none;
+    }
+
+    #red+hr {
+        background: linear-gradient(90deg, red 50%, #eee 50%);
+    }
+
+    #blue+hr {
+        background: linear-gradient(90deg, blue 50%, #eee 50%);
+    }
+
+    #green+hr {
+        background: linear-gradient(90deg, green 50%, #eee 50%);
+    }
+
+    #brown+hr {
+        background: linear-gradient(90deg, brown 50%, #eee 50%);
+    }
+
+    #blue {
+        color: blue;
+    }
+
+    #brown {
+        color: brown;
+    }
+
+    #green {
+        color: green;
+    }
+
+    #red {
+        color: red;
+    }
+
+    .titels::after {
+        content: "";
+        position: absolute;
+
+    }
+
+    .circle .titels::after {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+    }
+
+    .circle .titels::after,
+    .box .titels::after{
+        left: -4px;
+        bottom: -13.5px;
+    }
+
+    .box .titels::after {
+        height: 10px;
+        width: 10px;
+    }
+
+    .t_up .titels::after {
+        border-top: 10px solid transparent;
+        left: -10px;
+        bottom: -9px;
+    }
+
+    .t_down .titels::after,
+    .t_up .titels::after{
+        width: 0;
+        height: 0;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
+
+    .t_down .titels::after {
+        border-bottom: 10px solid transparent;
+        left: -10px;
+        bottom: -27.5px;
+    }
+
+    .t_down .titels#red::after {
+        border-top: 10px solid red;
+    }
+    .t_down .titels#blue::after {
+        border-top: 10px solid blue;
+    }
+    .t_down .titels#green::after {
+        border-top: 10px solid green;
+    }
+    .t_down .titels#brown::after {
+        border-top: 10px solid brown;
+    }
+
+    .t_up .titels#red::after {
+        border-bottom: 10px solid red;
+    }
+    .t_up .titels#blue::after {
+        border-bottom: 10px solid blue;
+    }
+    .t_up .titels#green::after {
+        border-bottom: 10px solid green;
+    }
+    .t_up .titels#brown::after {
+        border-bottom: 10px solid brown;
+    }
+
+    .container:not(.t_up,.t_down) #red::after {
+        background-color: red;
+    }
+
+    .container:not(.t_up,.t_down) #green::after {
+        background-color: green;
+    }
+
+    .container:not(.t_up,.t_down) #blue::after {
+        background-color: blue;
+    }
+
+    .container:not(.t_up,.t_down) #brown::after {
+        background-color: brown;
+    }
+</style>
+
+</html>

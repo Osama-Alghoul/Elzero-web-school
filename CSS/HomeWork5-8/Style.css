@@ -1,0 +1,26 @@
+.assign-1-shape-1
+{
+    width: 500px;
+    background-position: center center;
+    padding: 20px;
+    background-color: rgb(138, 43, 226);
+    margin: 20px;
+}
+
+.assign-1-shape-2
+{
+    width: 500px;
+    background-position: center center;
+    padding: 20px;
+    background-color: rgb(138, 43, 226, 50%);
+    margin: 20px;
+}
+
+.assign-1-shape-3
+{
+    width: 500px;
+    background-position: center center;
+    padding: 20px;
+    background-color: rgb(138, 43, 226, 10%);
+    margin: 20px;
+}

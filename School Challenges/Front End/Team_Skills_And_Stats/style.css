@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --background-color: #f6f6f6;
+    --bar-color: rgb(83, 83, 255);
+}
+
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.main.section {
+    flex-direction: column;
+}
+
+section {
+    padding: 10px 200px;
+}
+
+nav,
+footer {
+    padding: 10px 80px;
+}
+
+
+nav {
+    justify-content: space-between;
+}
+
+nav .name {
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    width: fit-content;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: unset;
+    text-decoration: none;
+    font-size: small;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 81, 110);
+    text-decoration: underline;
+}
+
+section.introduction {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+section.introduction .detail {
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+section.features {
+    margin-top: 20px;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section.features .feat {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-basis: 236px;
+}
+
+section.features .feat .img img {
+    width: 80px;
+    /* height: 20px; */
+}
+
+section.features .feat .intro {
+    font-weight: bold;
+}
+
+section.features .feat .detail {
+    color: #8e8d8d;
+    font-size: 12px;
+}
+
+section.about_us {
+    background-color: var(--background-color);
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+section.about_us img {
+    width: 400px;
+}
+
+section.about_us .detail {
+    font-size: small;
+    line-height: 22px;
+}
+
+section.cards {
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section.cards .card {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    flex-basis: 320px;
+}
+
+section.cards .card.red {
+    background-color: red;
+}
+
+section.cards .card.blue {
+    background-color: blue;
+}
+
+section.cards .card.green {
+    background-color: green;
+}
+
+section.cards .card .num {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+section.OurSkills {
+    background-color: var(--background-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section.OurSkills .intro {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+section.OurSkills .skills ul {
+    direction: rtl;
+    list-style: none;
+    flex-direction: column;
+    margin: 0;
+    padding-right: 0;
+    line-height: 41px;
+}
+
+section.OurSkills .skills .bar {
+    width: 870px;
+    height: 25px;
+}
+
+section.OurSkills .bar.six {
+    background: linear-gradient(90deg, var(--bar-color) 60%, white 60% 100%);
+}
+
+section.OurSkills .bar.seven {
+    background: linear-gradient(90deg, var(--bar-color) 70%, white 70% 100%);
+}
+
+section.OurSkills .bar.eight {
+    background: linear-gradient(90deg, var(--bar-color) 80%, white 80% 100%);
+}
+
+section.OurSkills .bar.six_half {
+    background: linear-gradient(90deg, var(--bar-color) 65%, white 65% 100%);
+}
+
+section.OurSkills .bar.nine {
+    background: linear-gradient(90deg, var(--bar-color) 90%, white 90% 100%);
+}
+
+section.OurSkills .bar{
+    position: relative;
+    padding: 15px 0;
+}
+
+section.OurSkills .bar::after{
+    position: absolute;
+    color: white;
+    top: 2px;
+}
+
+section.OurSkills .bar.six::after{
+    content: '60%';
+    right: 350px;
+}
+
+section.OurSkills .bar.eight::after{
+    content: '80%';
+    right: 178px;
+}
+section.OurSkills .bar.nine::after{
+    content: '90%';
+    right: 92px;
+}
+section.OurSkills .bar.six_half::after{
+    content: '65%';
+    right: 309px;
+}
+
+section.OurSkills .bar.seven::after{
+    content: '70%';
+    right: 266px;
+}
+
+section.OurSkills .skills .percBar {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+section.OurSkills .skills {
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer{
+    background-color: rgb(33, 32, 46);
+    justify-content: space-between;
+    color: white;
+}
+
+footer a{
+    color: rgb(94, 94, 244);
+    text-decoration: none;
+    margin-left: 5px;
+}

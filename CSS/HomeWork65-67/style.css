@@ -1,0 +1,84 @@
+.Q1 {
+    margin: 30px auto;
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: rgb(59, 59, 240);
+    position: relative;
+}
+
+.Q1::after {
+    content: "";
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    background-color: rgb(59, 59, 240);
+    z-index: -1;
+    rotate: -5deg;
+}
+
+.Q1::before {
+    content: "";
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    background-color: rgb(182, 27, 53);
+    z-index: -2;
+    rotate: 5deg;
+}
+
+/* Question 2 */
+
+.Q2 {
+    height: 200px;
+    width: 200px;
+    background-color: #eee;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    color: rgb(59, 59, 240);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 30px auto;
+}
+
+.Q2::after {
+    content: "";
+    height: 200px;
+    width: 200px;
+    background-color: rgb(182, 27, 53);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    border: rgb(182, 27, 53) solid 10px;
+    border-left-color: white;
+    transition-duration: 0.5s;
+}
+
+.Q2::before {
+    content: "";
+    height: 217px;
+    width: 217px;
+    /* background-color: rgb(59, 59, 240); */
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    border: rgb(59, 59, 240) solid 10px;
+    border-right-color: white;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.Q2:hover::after {
+    rotate: 360deg;
+}
+
+.Q2:hover::before {
+    rotate: 360deg;
+}

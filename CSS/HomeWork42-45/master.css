@@ -1,0 +1,71 @@
+/* Question 1 */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.Q1parent{
+    background-color: #eee;
+    text-align: center;
+    width: 400px;
+    height: 130px;
+    margin: 0px auto;
+    line-height: 40px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    position: relative;
+}
+
+.Q1parent:hover{
+    margin: 40px auto 0;
+}
+
+.Q1child{
+    background-color: rgb(159, 159, 159);
+    width: 300px;
+    text-align: center;
+    margin: -15px auto;
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.Q1parent:hover .Q1child{
+    margin-top: 20px;
+}
+
+/* Question 2 */
+.Q2div{
+    background-color: #eee !important;
+    color: black !important;
+    border:none !important;
+    text-align: center;
+    font-size: 30px !important;
+    width: 400px;
+    margin: auto;
+    position: relative !important;
+}
+
+.Q2div::after{
+    content: "Elzero";
+    position: absolute;
+    background-color: #eee;
+    right: 130px;
+    padding: 0 30px;
+}
+
+/* Question 3 */
+:root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+  }
+  
+  .Q3div {
+    color: var(--mainColor,red);
+    width: 400px;
+    border: 2px solid var(--mainColor,black);
+    padding: var(--mainPadding,10px);
+    margin-top: 5px;
+  }

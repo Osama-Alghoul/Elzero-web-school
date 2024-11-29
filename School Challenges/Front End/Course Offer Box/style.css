@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(98, 22, 185);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 50px;
+    width: 850px;
+}
+
+h1,
+p {
+    color: rgb(255, 255, 255);
+}
+
+.card {
+    width: 50%;
+    background-color: white;
+    padding: 50px;
+}
+
+.card.first {
+    z-index: -1;
+}
+
+.features .featur {
+    color: rgb(73, 73, 73);
+}
+
+
+.card .title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card .title span {
+    position: relative;
+}
+
+.card .title span::before {
+    content: '';
+    width: 100%;
+    height: 7px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 2px;
+    z-index: -1;
+}
+
+.card.first {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card.second {
+    border-radius: 0 5px 5px 0;
+    order: 2;
+    z-index: -2;
+}
+
+.features .featur {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.buy {
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.buy .price {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 10px;
+    position: relative;
+}
+
+.buy .price::after {
+    content: '$';
+    position: absolute;
+    font-size: large;
+    left: 0;
+}
+
+.buy .price::before {
+    content: 'USD';
+    position: absolute;
+    font-size: x-small;
+    right: -12px;
+    bottom: 5px;
+}
+
+.buy .btn {
+    color: white;
+    background-color: rgb(214, 163, 67);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.card .view {
+    font-size: smaller;
+}
+
+.card .view a {
+    color: unset;
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.card .view a:hover {
+    text-decoration: underline;
+}

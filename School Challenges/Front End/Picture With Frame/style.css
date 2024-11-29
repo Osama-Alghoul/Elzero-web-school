@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 900px;
+    display: flex;
+    margin: 100px auto;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 17px;
+}
+
+section.pic img {
+    width: 400px;
+    position: absolute;
+    transform: translate(-50px, 20%);
+    border-radius: 5px;
+}
+
+section.pic {
+    justify-content: center;
+    align-items: center;
+    padding: 75px 0;
+}
+
+section.pic .frame {
+    border: solid #38757f 10px;
+    width: 400px;
+    height: 280px;
+    position: relative;
+}
+
+section.details h1 {
+    font-size: xx-large;
+    margin-bottom: 7px;
+}
+
+section.details .about_us {
+    color: #38757f;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section.details .about_us .line {
+    width: 25px;
+    height: 1.5px;
+    background-color: #38757f;
+    margin: 0 5px 0 7px;
+    position: relative;
+}
+
+section.details .about_us .line::after {
+    content: '';
+    border: 1.5px solid #38757f;
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+
+section.details .parag {
+    color: rgb(135, 135, 135);
+    font-size: 13px;
+    line-height: 25px;
+}
+
+section.details .parag a {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 20px;
+    color: #38757f;
+}
+
+section.details .parag a:hover {
+    color: #2b5960;
+    text-decoration: underline;
+}
+
+/* Cards */
+section.details .cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.details .cards .card {
+    border: 1px solid #dad9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    gap: 10px;
+    cursor: pointer;
+}
+
+section.details .cards .card:hover {
+    border: 2px solid #38757f;
+}
+
+section.details .cards .card img {
+    width: 40px;
+}
+
+section.details .cards .card .img {
+    width: 40px;
+    height: 40px;
+}
+
+section.details #OT img {
+    border-radius: 50%;
+}
+
+section.details .words {
+    text-align: center;
+}
+
+section.details .traingle {
+    position: absolute;
+    border-top: 20px solid #2b5960;
+    border-left: 20px solid transparent;
+    top: 3px;
+    right: 3px;
+}
+
+section.details .bgNum {
+    position: absolute;
+    color: rgb(227 227 227);
+    font-size: xx-large;
+    font-weight: bold;
+    z-index: -1;
+    right: 20px;
+    top: 55px;
+}
+
+@media (max-width : 767px) {
+    .main {
+        flex-direction: column;
+        width: 100%;
+    }
+    section.pic,
+    section.details{
+        width: 100%;
+    }
+    section.details .cards{
+        justify-content: space-evenly;
+    }
+    section.pic img{
+        position: relative;
+        transform: translate(-10px, 20%);
+    }
+}

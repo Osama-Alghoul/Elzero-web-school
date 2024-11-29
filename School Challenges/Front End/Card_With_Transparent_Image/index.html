@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <span>Osama Alghoul</span>
+        <p class="discription">Front End Developer</p>
+
+        <hr>
+        <div class="facebook">
+            <p>Facebook</p>
+            <p>Osama A. Alghoul</p>
+        </div>
+        <div class="twitter">
+            <p>Twiitter</p>
+            <p>osssghoul</p>
+        </div>
+        <div class="linkedin">
+            <p>Linked in</p>
+            <p>Osama Alghoul</p>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #eee;
+    }
+
+    .container {
+        background-color: white;
+        text-align: center;
+        width: 400px;
+        margin: 100px auto;
+        padding: 25px;
+        border-radius: 2% 2%;
+        position: relative;
+    }
+
+    .container::after{
+        content: "A+";
+        color: white;
+        background-color: rgb(98, 98, 253);
+        padding: 6px;
+        border-radius: 10%;
+        position: absolute;
+        font-weight: bold;
+        right: 15px;
+        bottom: -15px;
+    }
+
+    span {
+        color: rgb(98, 98, 253);
+        font-weight: bold;
+        font-size: xx-large;
+
+    }
+
+    .discription {
+        color: #818181;
+        margin: 5px;
+    }
+
+    hr{
+        margin: 25px 0;
+    }
+
+    .facebook,
+    .twitter,
+    .linkedin {
+        background-color: #f2f1f1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+        padding: 5px 10px;
+    }
+
+    .facebook p,
+    .twitter p,
+    .linkedin p {
+        margin: 10px 0;
+    }
+</style>
+
+</html>

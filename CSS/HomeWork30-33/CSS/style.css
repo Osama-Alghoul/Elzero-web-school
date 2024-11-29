@@ -1,0 +1,182 @@
+.num1 {
+    width: 100px;
+    height: 100px;
+}
+
+.blue {
+    background-color: blue;
+    margin: 20px;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 2;
+}
+
+.green {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-color: green;
+    margin: 40px;
+    z-index: 3;
+}
+
+.red {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-color: red;
+    margin: 60px;
+    z-index: 4;
+}
+
+.black {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-color: black;
+    margin-top: 40px;
+    margin-left: 20px;
+    z-index: 0;
+}
+
+/* Number 2 */
+
+.num2 {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(241, 236, 236);
+    border-top: red solid;
+    border-bottom: red solid;
+    border-left: rgb(112, 112, 248) solid;
+    border-right: rgb(112, 112, 248) solid;
+    position: relative;
+}
+
+.top-left {
+    background-color: rgb(112, 112, 248);
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    top: -12px;
+    left: -16px;
+    text-align: center;
+    border-right: red solid;
+}
+
+.top-right {
+    background-color: rgb(112, 112, 248);
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    top: -12px;
+    right: -16px;
+    text-align: center;
+    border-left: red solid;
+}
+
+.bottom-left {
+    background-color: rgb(112, 112, 248);
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    bottom: -12px;
+    left: -16px;
+    text-align: center;
+    border-right: red solid;
+}
+
+.bottom-right {
+    background-color: rgb(112, 112, 248);
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    bottom: -12px;
+    right: -16px;
+    text-align: center;
+    border-left: red solid;
+}
+
+/* Number 3 */
+
+.num3 {
+    margin: auto;
+    width: 400px;
+    background-color: #eee;
+}
+
+ul.Parent {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+}
+
+.html li,
+.CSS li {
+    border: #eee solid;
+    list-style-position: outside;
+    background-color: white;
+}
+
+.JS li {
+    border: #eee solid;
+    background-color: white;
+    list-style-position: inside;
+}
+
+.CSS {
+    list-style: upper-roman;
+}
+
+.JS {
+    list-style-type: circle;
+    padding-left: 0;
+}
+
+.htmlP,
+.CSSP,
+.JSP {
+    border: white solid;
+    background-color: #eee;
+    padding: 5px;
+}
+
+/* Number 4 */
+
+img{
+    width: 90px;
+}
+
+table{
+    width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+thead{
+    background-color: rgb(59, 59, 59);
+    color: white;
+    height: 40px;
+}
+
+tbody{
+    background-color: #eee
+}
+
+.View{
+    display: inline-block;
+    background-color: rgb(95, 95, 252);
+    height: 20px;
+    width: 50px;
+    color: white;
+}
+
+.Del{
+    display: inline-block;
+    background-color: rgb(254, 70, 70);
+    height: 20px;
+    width: 50px;
+    color: white;
+}

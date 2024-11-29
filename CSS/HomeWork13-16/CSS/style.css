@@ -1,0 +1,27 @@
+div.parent .child span{
+    color: red;
+}
+
+div.parent span{
+    color: blue;
+}
+
+p,
+div.title{
+    color: green;
+}
+
+div.big{
+    width: 400px;
+}
+div.secondAssin{
+    display: inline-block;
+    background-color: crimson;
+    border: 15px crimson solid;
+    display: block;
+    margin-top: 5px;
+    height: 20px;
+    max-width: fit-content;
+    color: white;
+    overflow: hidden;
+}

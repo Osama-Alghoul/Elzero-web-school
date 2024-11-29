@@ -1,0 +1,19 @@
+.form {
+    background-color: rgb(251, 183, 183);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    gap: 5px;
+    border-radius: 4px;
+}
+
+.form .input {
+    width: 90%;
+}
+
+.tasks {
+    background-color: rgb(251, 183, 183);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+}

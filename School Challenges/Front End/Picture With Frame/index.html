@@ -1,0 +1,67 @@
+<!-- I've changed the colors and the layout to match with my discord server -->
+<!-- CHECK IT OUT AT "discord.gg/vaGaSmntjY" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Section Zero</title>
+</head>
+
+<body>
+    <div class="main">
+        <section class="pic">
+            <div class="frame">
+                <div class="img"><img src="imgs/MainPic.png" alt=""></div>
+            </div>
+        </section>
+        <section class="details">
+            <h1>We Are Here To Dream! Gamer It's your Time To Show Your Skills!</h1>
+            <div class="about_us">
+                <div class="line"></div>
+                <div class="about">about us</div>
+            </div>
+            <div class="parag">Section Zero the house of gamers, we hate to be formal because gaming is not for stress,
+                it's
+                the time and the place where we all can chill and relax and make our own experince,<a
+                    href="https://discord.gg/vaGaSmntjY" target="_blank">JOIN
+                    US</a>
+                gamer, let's go and have some fun</div>
+            <div class="cards">
+                <div class="card x" data-link="https://twitter.com/secti0n2020">
+                    <div class="traingle"></div>
+                    <div class="bgNum">01</div>
+                    <div class="img"><img src="imgs/X.png" alt=""></div>
+                    <div class="words">Follow on X</div>
+                </div>
+                <div class="card discord" data-link="https://discord.gg/vaGaSmntjY">
+                    <div class="traingle"></div>
+                    <div class="bgNum">02</div>
+                    <div class="img"><img src="imgs/discrod.png" alt=""></div>
+                    <div class="words">Join Discord</div>
+                </div>
+                <div class="card ot" data-link="https://discord.gg/g9JjdSBPQQ">
+                    <div class="traingle"></div>
+                    <div class="bgNum">03</div>
+                    <div class="img" id="OT"><img src="imgs/OT Beta Logo.png" alt=""></div>
+                    <div class="words">TIW Discord</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                var link = this.getAttribute('data-link');
+                if (link) {
+                    window.open(link, '_blank');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

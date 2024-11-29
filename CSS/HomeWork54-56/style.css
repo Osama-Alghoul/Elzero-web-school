@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+.Q1 {
+    font-size: 4em;
+    width: 600px;
+    height: 120px;
+    padding: 25px;
+    text-align: center;
+    background-color: #EEEEEE;
+    margin: 40px auto 0;
+    position: relative;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.Q1::first-letter {
+    color: #F44336;
+}
+
+.Q1::before {
+    content: "";
+    position: absolute;
+    width: 620px;
+    height: 140px;
+    background-color: #F44336;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    background-image: linear-gradient(to right,
+            #F44336 20%,
+            #2196F3 20%,
+            #2196F3 40%,
+            #4CAF50 40%,
+            #4CAF50 60%,
+            #E91E63 60%,
+            #E91E63 80%,
+            #673AB7 80%)
+}
+
+hr {
+    margin: 30px 0;
+}
+
+/* Question 2 */
+.box {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.box div {
+    width: 600px;
+    padding: 10px;
+    background-color: #EEEEEE;
+    margin: 20px 0;
+    position: relative;
+}
+.box div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: #F44336;
+    background-image: linear-gradient(to right, #19A094 50%, #F44336 50%);
+
+}
+.box div input {
+    border: none;
+    background-color: #EEEEEE;
+    width: 100%;
+    font-weight: 600;
+    caret-color: red;
+}

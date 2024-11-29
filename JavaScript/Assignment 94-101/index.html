@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinment 94-101</title>
+    <script>
+        window.onload = function (ele) {
+            let links = document.querySelectorAll("a.open");
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].innerHTML == "Elzero") {
+                    // links[i].click();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <a href="https://google.com" class="open" target="_blank">Google</a>
+    <a href="https://elzero.org" class="open" target="_blank">Elzero</a>
+    <a href="https://facebook.com" class="not" target="_blank">Facebook</a>
+    <a href="https://linkedin.com" class="linked" target="_blank">Elzero</a>
+    <!-- Just added target="_blank" so we can stay on our page -->
+
+    <div class="assign">
+        <input type="text" class="classes-to-add" placeholder="Add Classes" />
+        <input type="text" class="classes-to-remove" placeholder="Remove Classes" />
+        <div class="element current" title="Current">Current Element</div>
+        <div class="classes-list">
+            <h5>Current Element Class Lists</h5>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="our-element">Our Element</div>
+    <p>Paragraph</p>
+
+    <div class="Q4">
+        <span>Hello</span>
+        <!-- We Need The Next Text Without Spaces -->
+        Elzero
+    </div>
+
+    <div class="Q5">Element</div>
+    <span class="Q5">Element</span>
+    <p class="Q5">Element</p>
+    <article class="Q5">Element</article>
+    <section class="Q5">Element</section>
+
+    <script src="main.js"></script>
+    <style>
+        body {
+            Font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .assign {
+            Text-align: center;
+            Padding-top: 20px;
+        }
+
+        .assign input {
+            Padding: 10px;
+            Width: 300px;
+            Border: 1px solid #ddd;
+        }
+
+        .assign input:focus {
+            Outline: none;
+            Border-color: #ccc;
+        }
+
+        .assign [title="Current"] {
+            Padding: 20px;
+            Margin: 10px auto;
+            Width: 610px;
+            Background-color: #f1f0f0;
+        }
+
+        .assign .classes-list {
+            Padding: 20px;
+            Margin: 10px auto;
+            Width: 610px;
+            Background-color: #f1f0f0;
+        }
+
+        .assign .classes-list h5 {
+            Margin: 0 0 10px;
+            Text-align: left;
+        }
+
+        .assign .classes-list div span {
+            Background-color: #ff5722;
+            Padding: 6px 10px 8px;
+            Margin-right: 5px;
+            Border-radius: 6px;
+            Color: white;
+            Display: inline-flex;
+        }
+    </style>
+</body>
+
+</html>

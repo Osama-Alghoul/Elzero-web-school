@@ -1,0 +1,73 @@
+.parent {
+    background-color: #eee;
+    width: 1000px;
+}
+
+.clear{
+    clear: both;
+}
+
+.full {
+    background-color: rgb(170, 170, 170);
+    text-align: center;
+    margin: 15px 15px;
+    width: calc(100% - 30px);
+    float: left;
+    padding: 5px 0;
+}
+
+.thired {
+    background-color: rgb(170, 170, 170);
+    text-align: center;
+    margin: 15px 15px;
+    width: calc((100% - 90px) / 3);
+    float: left;
+    padding: 5px 0;
+
+}
+
+.half {
+    background-color: rgb(170, 170, 170);
+    text-align: center;
+    margin: 15px 15px;
+    width: calc((100% - 60px) /2);
+    float: left;
+    padding: 5px 0;
+
+}
+
+.q{
+    background-color: rgb(170, 170, 170);
+    text-align: center;
+    margin: 15px 15px;
+    width: calc((100% - 120px) / 4);
+    float: left;
+    padding: 5px 0;
+
+}
+
+.sec{
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: white; 
+    color: black;
+}
+
+.normal{
+    background-color: #eee;
+    margin-top: 2px;
+}
+
+.one{
+    background-color: rgb(238, 238, 238, 0.1);
+    margin-top: 10px;
+}
+
+.two{
+    background-color: #eee;
+    opacity: 0.1;
+    margin-top: 10px;
+}

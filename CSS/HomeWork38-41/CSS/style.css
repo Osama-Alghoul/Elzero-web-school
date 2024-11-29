@@ -1,0 +1,124 @@
+/* Question 1 */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.Q1 {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0 0 rgb(2, 123, 163), -5px -5px 0 0 rgb(247, 154, 168);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 7px;
+
+}
+
+div.Q1 p {
+    background-color: black;
+    color: white;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 35px;
+}
+
+div.Q1 span {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+
+}
+
+/* Question 2 */
+
+div.Q2 {
+    box-shadow: 0px 0px 20px 0px rgb(61 61 61) inset;
+    height: 150px;
+    width: 150px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-top-left-radius: 20px 40px;
+    border-bottom-right-radius: 20px 40px;
+}
+
+/* Question 3 */
+div.Parent {
+    width: 550px;
+    margin: auto;
+    position: relative;
+}
+
+div.icon {
+    background-color: #eee;
+    width: 250px;
+    position: relative;
+    display: inline-block;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+}
+
+div.icon p {
+    background-color: rgb(204, 202, 202);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+    line-height: 5.1;
+    font-size: 40px;
+    margin-left: 25px;
+    margin-top: 70px;
+}
+
+div.Parent p.or {
+    display: inline-block;
+    background-color: rgb(2, 123, 163);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+
+div.Parent p.or::before {
+    content: "";
+    width: 1.5px;
+    height: 300px;
+    background-color: rgb(2, 123, 163);
+    position: absolute;
+    top: 0;
+    left: 271px;
+    z-index: -1;
+}
+
+div.icon span {
+    background-color: rgb(2, 123, 163);
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    top: 20px;
+    right: 13%;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+div.icon span:hover {
+    cursor: default;
+}
+
+div.icon p:hover {
+    box-shadow: 7px 7px 0 rgb(247, 154, 168), -7px -7px 0 rgb(2, 123, 163);
+    cursor: pointer;
+}
