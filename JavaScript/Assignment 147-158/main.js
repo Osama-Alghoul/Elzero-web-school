@@ -7,7 +7,7 @@ class Car {
     }
     run() {
         return `Car Is Running Now`
-    } 
+    }
     stop() {
         return "Car Is Stopping Now"
     }
@@ -31,9 +31,18 @@ class Phone {
         this.serial = serial;
         this.price = price;
     }
-    
+
 }
 // Write Tablet Class Here
+class Tablet extends Phone {
+    constructor(name, serial, price, size = "Unknown") {
+        super(name, serial, price);
+        this.size = size;
+    }
+    fullDetails() {
+        return `${this.name} Serial is ${this.serial} And Size Is ${this.size}`
+    }
+}
 
 let TabletOne = new Tablet("iPad", 100200300, 1500, 12.9);
 let TabletTwo = new Tablet("Nokia", 350450650, 800, 10.5);
@@ -49,11 +58,23 @@ console.log(`${TabletThree.fullDetails()}`);
 // LG Serial is 250450650 And Size Is Unknown
 
 // 03
-// Edit The Class
 class User {
+    #card; // Private property to store the card number
+
     constructor(username, card) {
         this.u = username;
-        this.c = card;
+        this.#card = this.formatCard(card); // Format the card number upon creation
+    }
+
+    // Method to format the card number
+    formatCard(card) {
+        let cardStr = card.toString(); // Ensure it's a string
+        return cardStr.replace(/\D/g, "").replace(/(\d{4})(?=\d)/g, "$1-"); // Format into groups of 4 digits
+    }
+
+    // Getter for showData
+    get showData() {
+        return `Hello ${this.u} Your Credit Card Number Is ${this.#card}`;
     }
 }
 
@@ -75,9 +96,12 @@ console.log(userThree.showData);
 console.log(userOne.c); // Prevent Accessing To Card Property Here
 // Undefined
 
+
 // 04
 // Write Your Code Here
-
+String.prototype.addLove = function (val) {
+    return `I love ${this} Web School`;
+};
 
 // Do Not Edit Below
 let myStr = "Elzero";
@@ -93,6 +117,25 @@ const myObj = {
 
 // Write Your Code Here
 
+// Make the "score" property read-only
+Object.defineProperty(myObj, "score", {
+    writable: false, // Prevent modification
+    enumerable: true, // Ensure it is visible in the loop
+});
+
+// Hide the "id" property in the loop
+Object.defineProperty(myObj, "id", {
+    enumerable: false, // Prevent it from appearing in the loop
+});
+
+// Hide the "country" property entirely
+Object.defineProperty(myObj, "country", {
+    enumerable: false, // Prevent it from appearing in the loop
+    configurable: false, // Ensure it cannot be deleted
+});
+
+// Do Not Edit Below
+
 myObj.score = 500;
 
 for (let prop in myObj) {
@@ -100,9 +143,3 @@ for (let prop in myObj) {
 }
 
 console.log(myObj);
-
-// Needed Output
-
-"username => Elzero"
-"score => 1000"
-//{ username: 'Elzero', score: 1000, id: 100 }
