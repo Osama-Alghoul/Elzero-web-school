@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "writer": "Osama",
+        "department": "gaming",
+        "title": "Why section zero is the best",
+        "content": "come and see your self https://discord.gg/vaGaSmntjY"
+    },
+    {
+        "id": 2,
+        "writer": "Mahmoud",
+        "department": "gaming",
+        "title": "Why hate the console",
+        "content": "You don't want to know why"
+    },
+    {
+        "id": 3,
+        "writer": "MKH",
+        "department": "bussnies",
+        "title": "How to grow faster",
+        "content": "Join us an I'll tell you :)"
+    },
+    {
+        "id": 4,
+        "writer": "Mohammed Salma",
+        "department": "Life style",
+        "title": "Drink water",
+        "content": "It's good for your health"
+    },
+    {
+        "id": 5,
+        "writer": "MM",
+        "department": "Safty",
+        "title": "How to stay away from scammers",
+        "content": "Keep a private profile"
+    }
+]

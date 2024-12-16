@@ -56,4 +56,70 @@ for (let i = 0; i < 999; i++) {
 let end = performance.now();
 console.log(`Loop took ${end - start} milliseconds.`);
 
-// 05
+// 06
+function* gen() {
+    let index = 14;
+    let increment = 140;
+    while (true) {
+        yield index; // Pattern is unknown till now
+        index += increment;
+        increment += 200;
+    }
+}
+
+let generator = gen();
+
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+
+// 07
+function* genNumbers() {
+    yield* [1, 2, 2, 2, 3, 4, 5];
+}
+
+function* genLetters() {
+    yield* ["A", "B", "B", "B", "C", "D"];
+}
+
+function* genAll() {
+    const seen = new Set();
+    for (let value of genNumbers()) {
+        if (!seen.has(value)) {
+            seen.add(value);
+            yield value;
+        }
+    }
+    for (let value of genLetters()) {
+        if (!seen.has(value)) {
+            seen.add(value);
+            yield value;
+        }
+    }
+}
+
+let generator07 = genAll();
+
+console.log(generator07.next()); // {value: 2, done: false}
+console.log(generator07.next()); // {value: 1, done: false}
+console.log(generator07.next()); // {value: 3, done: false}
+console.log(generator07.next()); // {value: 4, done: false}
+console.log(generator07.next()); // {value: 5, done: false}
+console.log(generator07.next()); // {value: "A", done: false}
+console.log(generator07.next()); // {value: "B", done: false}
+console.log(generator07.next()); // {value: "C", done: false}
+console.log(generator07.next()); // {value: "D", done: false}
+
+
+// 08
+// main.js
+import calc from './mod-one.js';
+import { modOne } from './mod-two.js';
+
+console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree)); // 60
