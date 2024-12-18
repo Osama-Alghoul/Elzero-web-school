@@ -1,37 +1,37 @@
 [
     {
         "id": 1,
-        "writer": "Osama",
-        "department": "gaming",
         "title": "Why section zero is the best",
-        "content": "come and see your self https://discord.gg/vaGaSmntjY"
+        "body": "This article discusses why section zero stands out.",
+        "author": "Ali",
+        "category": "Gaming"
     },
     {
         "id": 2,
-        "writer": "Mahmoud",
-        "department": "gaming",
         "title": "Why hate the console",
-        "content": "You don't want to know why"
+        "body": "An analysis of console usage in modern programming.",
+        "author": "Mahmoud",
+        "category": "Education"
     },
     {
         "id": 3,
-        "writer": "MKH",
-        "department": "bussnies",
         "title": "How to grow faster",
-        "content": "Join us an I'll tell you :)"
+        "body": "Tips and tricks for personal and professional growth.",
+        "author": "Osama",
+        "category": "Self-Development"
     },
     {
         "id": 4,
-        "writer": "Mohammed Salma",
-        "department": "Life style",
         "title": "Drink water",
-        "content": "It's good for your health"
+        "body": "The benefits of staying hydrated throughout the day.",
+        "author": "Sayed",
+        "category": "Health"
     },
     {
         "id": 5,
-        "writer": "MM",
-        "department": "Safty",
         "title": "How to stay away from scammers",
-        "content": "Keep a private profile"
+        "body": "An informative guide to identifying and avoiding scams.",
+        "author": "Ahmed",
+        "category": "Safety"
     }
 ]
