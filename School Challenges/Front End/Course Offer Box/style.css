@@ -127,3 +127,19 @@ p {
 .card .view a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width : 767px) {
+    .container{
+        width: auto;
+    }
+    div.sup_container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+    .card.second{
+        border-radius: 5px;
+    }
+}
