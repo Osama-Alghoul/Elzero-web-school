@@ -119,10 +119,6 @@ section.details .cards .card .img {
     height: 40px;
 }
 
-section.details #OT img {
-    border-radius: 50%;
-}
-
 section.details .words {
     text-align: center;
 }
