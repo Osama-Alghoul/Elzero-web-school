@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Articles Editor</title>
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="tools flex">
+            <select name="Choose Font" id="fonts">
+                <option value="Cairo">Cairo</option>
+                <option value="Arial">Arial</option>
+                <option value="monospace">monospace</option>
+            </select>
+            <button class="bold">B</button>
+            <button class="dec">-</button>
+            <div class="num">16</div>
+            <button class="inc">+</button>
+            <button class="invert">Invert Colors</button>
+        </div>
+        <textarea name="editor"
+            id="edit">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident necessitatibus rem illum consequuntur, velit iure sed voluptates quidem, odio cumque quisquam. Rem iusto doloribus ratione nobis ipsum libero tempore fugit?</textarea>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

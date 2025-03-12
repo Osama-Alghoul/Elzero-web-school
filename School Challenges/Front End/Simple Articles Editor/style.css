@@ -1,0 +1,38 @@
+.container {
+    margin: 0 auto;
+    background-color: rgb(227, 227, 227);
+    flex-direction: column;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.flex {
+    display: flex;
+}
+
+.tools{
+    margin-bottom: 5px;
+    gap: 2.5px;
+}
+
+button, .tools div{
+    background-color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: gainsboro;
+}
+
+textarea{
+    height: 200px;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bold{
+    font-weight: bold;
+}
