@@ -1,0 +1,79 @@
+:root {
+    --main-color: #00b0ff;
+    --gray: #eceff1;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: url("imgs/background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.chats img {
+    width: 20px;
+}
+
+.contacts {
+    flex-direction: column;
+}
+
+.chats .chat,
+.chats .infos {
+    display: flex;
+}
+
+.container{
+    background-color: white;
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+input.bar {
+    border: none;
+    background-color: var(--gray);
+    border-radius: 32px;
+    padding: 10px;
+    margin-right: 6px;
+}
+
+button.edit {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: relative;
+}
+
+button.edit::after {
+    content: "";
+    color: white;
+    height: 15px;
+    width: 15px;
+    border: 1px solid white;
+    position: absolute;
+    translate: -50% -50%;
+}
+
+button.edit::before{
+    content: "";
+    color: white;
+    height: 15px;
+    border: 1px solid white;
+    position: absolute;
+    translate: 300% -90%;
+    position: absolute;
+    rotate: 45deg;
+}
+
+button.edit:hover {
+    background-color: #0099ff;
+}
