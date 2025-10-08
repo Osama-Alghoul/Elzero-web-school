@@ -1,52 +1,64 @@
 let input = document.querySelector(".form .input");
 let addTask = document.querySelector(".add");
-let tasks = document.querySelector(".tasks");
-let chkBox = document.querySelector(`input[type="checkbox"]`);
-let lbl = document.querySelector("label")
+let tasksContainer = document.querySelector(".tasks");
 let arr = [];
 
+window.onload = function () {
+  let storedTasks = this.localStorage.getItem("tasks");
+  if (storedTasks) {
+    arr = JSON.parse(storedTasks);
+    arr.forEach((taskText) => {
+      addTaskToPage(taskText);
+    });
+  }
+};
+
 addTask.onclick = () => {
-    if (arr.indexOf(input.value) == -1) {
-        arr.push(input.value);
+  if (input.value !== "" && arr.indexOf(input.value) === -1) {
+    addTaskToPage(input.value);
+    arr.push(input.value);
+    localStorage.setItem("tasks", JSON.stringify(arr));
+    input.value = "";
+    input.focus();
+  } else if (arr.indexOf(input.value) > -1) {
+    window.alert("Task already exists!");
+  } else {
+    window.alert("Please enter a task!");
+  }
+};
 
-        let task = document.createElement("div");
-        task.className = "task";
-        task.id = Date.now();
-        let checkBox = document.createElement("input");
-        checkBox.type = "checkbox";
-        checkBox.id = `${input.value}`;
+function addTaskToPage(taskText) {
+  let taskDiv = document.createElement("div");
+  taskDiv.className = "task";
 
-        let label = document.createElement("label");
-        label.setAttribute("for", `${input.value}`)
-        label.textContent = `${input.value}`;
+  let checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.id = `task-${taskText.replace(/\s+/g, "-")}`;
+  checkBox.addEventListener("change", function () {
+    label.classList.toggle("lined");
+  });
 
-        let div = document.createElement("div");
-        div.appendChild(checkBox);
-        div.appendChild(label);
-        task.appendChild(div);
+  let label = document.createElement("label");
+  label.setAttribute("for", `task-${taskText.replace(/\s+/g, "-")}`);
+  label.textContent = taskText;
 
-        let deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
-        deleteBtn.className = Date.now();
-        deleteBtn.style.cssText = "color: white;background-color: red;border-radius: 4px;border-color: transparent;";
-        task.appendChild(deleteBtn);
-        task.style.cssText = "display: flex;justify-content: space-between; margin-bottom: 4px;"
-        tasks.appendChild(task);
-    } else {
-        window.alert("Task is already exsit");
-    }
+  let div = document.createElement("div");
+  div.appendChild(checkBox);
+  div.appendChild(label);
+  taskDiv.appendChild(div);
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.style.cssText =
+    "color: white;background-color: red;border-radius: 4px;border-color: transparent;";
+  deleteBtn.onclick = function () {
+    taskDiv.remove();
+    arr = arr.filter((task) => task !== taskText);
+    localStorage.setItem("tasks", JSON.stringify(arr));
+  };
+  taskDiv.appendChild(deleteBtn);
+  taskDiv.style.cssText =
+    "display: flex;justify-content: space-between; margin-bottom: 4px;";
+
+  tasksContainer.appendChild(taskDiv);
 }
-
-chkBox.addEventListener("click", function () {
-    if (lbl.classList.contains("lined")) {
-        lbl.style.textDecoration = "none";
-        lbl.classList.remove("lined");
-    } else {
-        lbl.style.textDecoration = "line-through";
-        lbl.classList.add("lined");
-    }
-});
-
-deleteBtn.addEventListener("click", (delbtn) =>{
-    document.removeChild(`div#${delbtn.className}`);
-})
